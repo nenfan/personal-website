@@ -13,38 +13,40 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         .container {
             text-align: center;
             background-color: #ffffff;
             border-radius: 10px;
-            padding: 30px;
-            width: 90%;
-            max-width: 800px;
+            padding: 20px;
+            max-width: 90%; /* 限制最大宽度 */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #333;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #666;
             margin-bottom: 15px;
         }
 
         p {
             color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 25px;
+            font-size: 1rem;
+            margin-bottom: 20px;
         }
 
         img {
-            max-width: 100%;
+            max-width: 100%; /* 图片宽度设为100%以响应屏幕尺寸 */
             height: auto;
             border: 5px solid #ddd;
             border-radius: 10px;
@@ -53,51 +55,48 @@
 
         .project-description {
             margin-top: 20px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #444;
             text-align: left;
         }
 
         footer {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 0.9rem;
             color: #888;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
-        }
+        /* 媒体查询：适配不同屏幕尺寸 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
 
-        .btn:hover {
-            background-color: #45a049;
+            h2 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 项目中文名称 -->
         <h1>多轴运动控制卡项目</h1>
-        <!-- 项目英文名称 -->
         <h2>Multi-Axis Motion Control Card Project</h2>
-        
         <p>感谢您查看我的项目，以下是我参与的一个关键项目：</p>
         <img src="images/project_photo.jpg" alt="项目照片">
-        
-        <!-- 项目描述 -->
         <div class="project-description">
             <p><strong>项目内容：</strong>开发了一款多轴运动控制卡，用于物料识别和打包场景。通过优化网络通讯协议，实现以太网与STM32的数据交换，并通过FSMC总线与FPGA控制32路I/O和4轴电机。</p>
         </div>
-
         <footer>
-            <p>© 2024 - 智能电子控制实验室</p>
+            <p>© 2024 - 潘树坤</p>
         </footer>
     </div>
 </body>
